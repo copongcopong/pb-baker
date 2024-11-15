@@ -6,8 +6,10 @@ PocketBase (v0.23.xx) project initializer in Bun
 - requires pocketbase
 - `/app/**` contains TS files that will be loaded as JSVM libs and hooks (CJS bundled)
 - `/app/app.build.ts` - build script for pb_hooks
-- `/app/lib.build.ts` - build script for reusable JSVM libs inside pb_hooks `const lib  = require(\`${__hooks}/app/lib\`)`
-
+- `/app/lib.build.ts` - build script for reusable JSVM libs inside pb_hooks 
+    ```
+    const lib  = require(`${__hooks}/app/lib`);
+    ```
 
 To install dependencies:
 
@@ -15,16 +17,23 @@ To install dependencies:
 bun install
 ```
 
-To build pb-related hooks and jsvm libraries:
+To run for the first time (will get pocketbase v0.23 rc13, create Superuser)
 
 ```bash
-bun run build
+bun run initialize!
 ```
+
 
 To start local development (auto reload and builds pb-related hooks and jsvm libraries):
 
 ```bash
 bun run dev
+```
+
+To build pb-related hooks and jsvm libraries:
+
+```bash
+bun run build
 ```
 
 get pocketbase
