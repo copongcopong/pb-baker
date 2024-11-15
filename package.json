@@ -1,0 +1,24 @@
+{
+  "name": "pb-baker",
+  "version": "0.1.0",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@alik6/bun-copy-plugin": "^0.0.10",
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "dev:pb-app": "bun run ./app/app.build.ts",
+    "dev:pb-lib": "bun run ./app/lib.build.ts",
+    "dev:pb-main": "./pocketbase serve --http 127.0.0.1:8888",
+    "dev": "bun run dev:pb-app --watch & bun run dev:pb-lib --watch & bun run dev:pb-main",
+    "build": "bun run dev:pb-app && bun run dev:pb-lib && echo build complete!",
+    "initialize!": "bun run ./app/scripts/init.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "pocketbase-jsvm": "^0.23.10002"
+  }
+}
