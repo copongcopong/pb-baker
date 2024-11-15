@@ -1,9 +1,12 @@
 # PocketBase Baker
 
-PocketBase (v0.23.xx) project initializer in Bun
+PocketBase (v0.23.xx, Extend with JavaScript) project initializer in Bun
 
-- designed for PocketBase v0.23.xx
-- requires pocketbase
+- designed for PocketBase v0.23.xx 
+  - see https://pocketbase.io/docs/use-as-framework/
+  - https://pocketbase.io/v023upgrade/jsvm/
+  - https://pocketbase.io/jsvm-rc/
+
 - `/app/**` contains TS files that will be loaded as JSVM libs and hooks (CJS bundled)
 - `/app/app.build.ts` - build script for pb_hooks
 - `/app/lib.build.ts` - build script for reusable JSVM libs inside pb_hooks 
