@@ -1,6 +1,6 @@
 import Handlebars from "handlebars";
 
-export const hbsRenderer = (path: string) => {
+export const hbsRenderer = (path: string, partials: any, helpers: any) => {
   let realPath;
   const inapp = $filepath.glob(`${__hooks}/app/app/${path}`);
   if (inapp) realPath = inapp;
@@ -16,10 +16,22 @@ export const hbsRenderer = (path: string) => {
     throw Error('Missing hbs template file.')
   };
 
+  if (partials) {
+    for(const k in partials) {
+      Handlebars.registerPartial(k, partials[k]);
+    }
+  }
+
+  if (helpers) {
+    for(const kk in helpers) {
+      Handlebars.registerHelper(kk, helpers[kk]);
+    }
+  }
+
   if(!c.get(key)) {
     //@ts-ignore
     const tpl = String.fromCharCode(...$os.readFile(realPath));
-    console.log(tpl)
+    //console.log(tpl)
     const t = Handlebars.compile(tpl);
     c.set(key, t);
     return {render: t};
