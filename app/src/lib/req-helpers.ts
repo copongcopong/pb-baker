@@ -9,26 +9,22 @@ export const hbsRenderer = (path: string, partials: any, helpers: any) => {
     if (inviews) realPath = inviews;
   }
 
-  const c = $app.store();
-  const key = path;
-
   if (!realPath) {
     throw Error('Missing hbs template file.')
   };
+  const _key = ['hbs-view-tpl', realPath];
 
-  if (partials) {
-    for(const k in partials) {
-      Handlebars.registerPartial(k, partials[k]);
-    }
-  }
-
-  if (helpers) {
-    for(const kk in helpers) {
-      Handlebars.registerHelper(kk, helpers[kk]);
-    }
-  }
+  if (partials) _key.push(Object.keys(partials));
+  if (helpers) _key.push(Object.keys(helpers));
+  
+  const c = $app.store();
+  const key = _key.join(':');
 
   if(!c.get(key)) {
+
+    if (partials) Handlebars.registerPartial(partials);
+    if (helpers) Handlebars.registerHelper(helpers);
+    
     //@ts-ignore
     const tpl = String.fromCharCode(...$os.readFile(realPath));
     //console.log(tpl)
