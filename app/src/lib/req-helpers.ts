@@ -12,8 +12,8 @@ export const hbsRenderer = (path: string, partials: any, helpers: any) => {
   if (!realPath) {
     throw Error('Missing hbs template file.')
   };
-  const _key = ['hbs-view-tpl', realPath];
 
+  const _key = ['hbs-view-tpl', realPath];
   if (partials) _key.push(Object.keys(partials).toString());
   if (helpers) _key.push(Object.keys(helpers).toString());
   
