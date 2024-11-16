@@ -14,8 +14,8 @@ export const hbsRenderer = (path: string, partials: any, helpers: any) => {
   };
   const _key = ['hbs-view-tpl', realPath];
 
-  if (partials) _key.push(Object.keys(partials));
-  if (helpers) _key.push(Object.keys(helpers));
+  if (partials) _key.push(Object.keys(partials).toString());
+  if (helpers) _key.push(Object.keys(helpers).toString());
   
   const c = $app.store();
   const key = _key.join(':');
