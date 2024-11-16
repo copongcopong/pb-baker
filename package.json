@@ -10,8 +10,8 @@
   "scripts": {
     "dev:pb-app": "bun run ./app/app.build.ts",
     "dev:pb-lib": "bun run ./app/lib.build.ts",
-    "dev:pb-main": "./pocketbase serve --http 127.0.0.1:8888",
-    "dev": "bun run dev:pb-app --watch & bun run dev:pb-lib --watch & bun run dev:pb-main",
+    "dev:pb-main": "./pocketbase serve --indexFallback=false --http 127.0.0.1:8880",
+    "dev": "(bun run dev:pb-app --watch & bun run dev:pb-lib --watch) & bun run dev:pb-main",
     "build": "bun run dev:pb-app && bun run dev:pb-lib && echo build complete!",
     "initialize!": "bun run ./app/scripts/init.ts"
   },
@@ -19,6 +19,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "fs-routes": "^12.1.3",
+    "handlebars": "^4.7.8",
     "pocketbase-jsvm": "^0.23.10002"
   }
 }

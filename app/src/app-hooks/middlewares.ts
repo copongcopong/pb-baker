@@ -6,7 +6,7 @@ const logger = (e: any) => {
 }
 
 export default function loadMiddlewares() {
-  //routerUse(logger)
+  routerUse(logger);
   //routerAdd("GET", "/_app/{path...}", $apis.static("./pb_public/_app", false))
   //routerAdd("GET", "/tpls/{path...}", $apis.static("./pb_public/tpls", false))
   console.log("loaded > app:hooks:middlewares", new Date())

@@ -181,3 +181,5 @@ LICENSE.md
 _pb.zip
 pocketbase_*.zip
 CHANGELOG.md
+app/tmp/*
+/pb_public/*
