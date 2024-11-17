@@ -14,6 +14,12 @@ PocketBase (v0.23.xx, Extend with JavaScript) project initializer in Bun
     const lib  = require(`${__hooks}/app/lib`);
     ```
 
+To use this stack (use degit; https://github.com/Rich-Harris/degit)
+
+```bash
+bunx degit copongcopong/pb-baker
+```
+
 To install dependencies:
 
 ```bash
