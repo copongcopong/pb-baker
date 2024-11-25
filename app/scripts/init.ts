@@ -8,13 +8,23 @@ if (fs.existsSync('./pocketbase')) {
   process.exit(0);
 }
 
-console.log(os.arch(), os.platform())
+console.log(`Platform check: `, os.arch(), os.platform())
+let platform = os.platform();
+let arch = os.arch();
+if (platform === 'linux' && arch === 'x64') arch = 'amd64';
 const version = `0.23.1`;
 const dl =`https://github.com/pocketbase/pocketbase/releases/download`;
-const pb = `${dl}/v${version}/pocketbase_${version}_${os.platform()}_${os.arch()}`;
+const pb = `${dl}/v${version}/pocketbase_${version}_${platform}_${arch}`;
 
-await $`wget ${pb}.zip -O _pb.zip`;
-console.log('PocketBase downloaded. Will attempt to extract ...');
+try {
+  await $`wget ${pb}.zip -O _pb.zip`;
+  console.log('PocketBase downloaded. Will attempt to extract ...');
+} catch (err) {
+  console.log('Issue downloading PocketBase!');
+  console.log('See https://github.com/pocketbase/pocketbase/releases .');
+  process.exit(0);  
+}
+
 try {
   await $`unzip _pb.zip`;
   console.log('PocketBase extracted.');
