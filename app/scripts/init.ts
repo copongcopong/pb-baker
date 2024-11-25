@@ -9,7 +9,7 @@ if (fs.existsSync('./pocketbase')) {
 }
 
 console.log(os.arch(), os.platform())
-const version = `0.23.0-rc13`;
+const version = `0.23.1`;
 const dl =`https://github.com/pocketbase/pocketbase/releases/download`;
 const pb = `${dl}/v${version}/pocketbase_${version}_${os.platform()}_${os.arch()}`;
 
