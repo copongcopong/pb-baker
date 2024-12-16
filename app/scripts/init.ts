@@ -12,7 +12,7 @@ console.log(`Platform check: `, os.arch(), os.platform())
 let platform = os.platform();
 let arch = os.arch();
 if (platform === 'linux' && arch === 'x64') arch = 'amd64';
-const version = `0.23.1`;
+const version = `0.23.7`;
 const dl =`https://github.com/pocketbase/pocketbase/releases/download`;
 const pb = `${dl}/v${version}/pocketbase_${version}_${platform}_${arch}`;
 
