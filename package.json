@@ -1,6 +1,6 @@
 {
   "name": "pb-baker",
-  "version": "0.1.0",
+  "version": "0.1.284",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -16,7 +16,7 @@
     "initialize!": "bun run ./app/scripts/init.ts"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.6.3"
   },
   "dependencies": {
     "pocketbase-jsvm": "^0.23.10002"
