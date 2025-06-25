@@ -2,7 +2,7 @@
 
 PocketBase (v0.28.4, Extend with JavaScript) project initializer in Bun
 
-- designed for PocketBase v0.23.xx and Bundler by Bun (https://bun.sh)
+- designed for PocketBase v0.28.4 and Bundler by Bun (https://bun.sh)
   - see Release Notes: https://github.com/pocketbase/pocketbase/releases/tag/v0.28.4
   - See Docs: https://pocketbase.io/docs/
   - see https://pocketbase.io/docs/use-as-framework/
