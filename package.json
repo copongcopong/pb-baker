@@ -19,6 +19,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "pocketbase-jsvm": "^0.23.10002"
+    "pocketbase-jsvm": "^0.25.10001"
   }
 }
