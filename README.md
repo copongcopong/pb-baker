@@ -1,9 +1,9 @@
 # PocketBase Baker
 
-PocketBase (v0.36.8, Extend with JavaScript) project initializer in Bun
+PocketBase (v0.39.11, Extend with JavaScript) project initializer in Bun
 
-- designed for PocketBase v0.36.8 and Bundler by Bun (https://bun.sh)
-  - see Release Notes: https://github.com/pocketbase/pocketbase/releases/tag/v0.36.8
+- designed for PocketBase v0.39.11 and Bundler by Bun (https://bun.sh)
+  - see Release Notes: https://github.com/pocketbase/pocketbase/releases/tag/v0.39.11
   - See Docs: https://pocketbase.io/docs/
   - see https://pocketbase.io/docs/use-as-framework/
   - https://pocketbase.io/docs/js-overview/
@@ -33,7 +33,7 @@ To install dependencies:
 bun install
 ```
 
-To run for the first time (will get pocketbase v0.36.8, then create Superuser)
+To run for the first time (will get pocketbase v0.39.11, then create Superuser)
 
 ```bash
 bun run initialize!
