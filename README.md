@@ -1,3 +1,5 @@
+
+
 # PocketBase Baker
 
 PocketBase (v0.39.11, Extend with JavaScript) project initializer in Bun
@@ -38,6 +40,8 @@ To run for the first time (will get pocketbase v0.39.11, then create Superuser)
 ```bash
 bun run initialize!
 ```
+
+The `initialize!` script requires `wget` and `unzip`.
 
 
 To start local development (auto reload and builds pb-related hooks and jsvm libraries):
